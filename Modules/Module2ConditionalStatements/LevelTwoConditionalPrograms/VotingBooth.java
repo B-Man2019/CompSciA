@@ -2,25 +2,17 @@ package LevelTwoConditionalPrograms;
 
 import java.util.*;
 
-// Guessing Game
-public class VotingBooth {
+public class VotingBooth { 
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
-    
-    System.out.println("-- Guessing Game --");
-    int answer = (int)(Math.random()*10 + 1);
-    // System.out.println(answer);
-    System.out.print("\nGuess a number 1-10: ");
-
-    int guess = scan.nextInt();
-    if (guess==answer) {
-      System.out.println("You got it right!");
-    }
-    else if (guess<answer) {
-      System.out.println("Too low!");
+    System.out.println("-- Voting Booth --");
+    System.out.print("\nWhat is your age? ");
+    int age = scan.nextInt();
+    if (age >= 18) {
+      System.out.println("You can vote!");
     }
     else {
-      System.out.println("Too high!");
+      System.out.println("You can't vote.");
     }
     scan.close();
   }
