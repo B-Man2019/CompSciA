@@ -104,7 +104,7 @@ public class PigGame {
                     System.out.println("The computer got a one, so it loses all points for this turn and has to turn over the dice.\n");
                     computerTurnTotal = 0;
 
-                    turnOver = true;
+                    break;
                 }
 
                 if (computerRollOne + computerRollTwo == 2) { 
@@ -119,12 +119,20 @@ public class PigGame {
                     break;
                 }
 
+                if (computerTurnTotal >= 20) {
+                    turnOver = true;
+                }
+
                 System.out.println("Computer rolled a " + computerRollOne + " and a " + computerRollTwo + ".");
                 System.out.println("Total rolled this move: " + computerRollSum + ".");
                 System.out.println("Total this turn: " + computerTurnTotal + "\n");
                 System.out.println("Total this game: " + computerGameTotal + "\n\n");
 
             } while (computerTurnTotal <= 20 && !turnOver);
+            if (turnOver = true) {
+                System.out.println("The computer has turned over the dice.\n");
+            }
+
             computerTurnTotal = 0;
             System.out.println("\n-- PLAYER'S TURN BEGINS --");
         } while(!gameOver);
