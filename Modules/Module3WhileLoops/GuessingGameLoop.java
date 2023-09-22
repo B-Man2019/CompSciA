@@ -6,6 +6,7 @@ public class GuessingGameLoop {
 
         System.out.println("-- GuessingGame --");
         int answer = (int)(Math.random()*100 + 1);
+        System.out.println(answer);
         int guess;
         int playAgain;
         int index = 0;
