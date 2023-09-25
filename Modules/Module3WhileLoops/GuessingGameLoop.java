@@ -12,6 +12,8 @@ public class GuessingGameLoop {
         int index = 0;
         System.out.println("Guess a number 1-100. Type -5 to quit.");
         do {
+            index = 0;
+            answer = (int)(Math.random() * 100 + 1);
             do {
                 System.out.print("Guess: ");
                 guess = scan.nextInt();
