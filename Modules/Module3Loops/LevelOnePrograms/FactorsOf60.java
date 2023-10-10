@@ -1,4 +1,4 @@
-package LevelOnePrograms;
+package Modules.Module3Loops.LevelOnePrograms;
 
 import java.util.Scanner;
 

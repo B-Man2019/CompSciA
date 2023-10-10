@@ -1,3 +1,6 @@
+package Modules.Module3Loops;
+
+
 import java.util.Scanner;
 
 public class GuessingGameLoop {

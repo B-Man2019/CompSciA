@@ -1,4 +1,4 @@
-package ExtraCredit;
+package Modules.Module3Loops.ExtraCredit;
 
 import java.util.Scanner;
 
