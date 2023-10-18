@@ -2,7 +2,7 @@ package Modules.Module5Classes;
 
 public class Dice {
     private int sides;
-    int roll;
+    private int roll;
 
     public Dice(int s) {
         sides = s;
