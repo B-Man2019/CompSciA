@@ -11,5 +11,6 @@ public class MultiplesOfFiveForLoop {
         for (int i = 1; i <= numMultiples; i++) {
             System.out.print(i * 5 + "\t");
         }
+        scan.close();
     }
 }

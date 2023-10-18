@@ -4,32 +4,47 @@ public class BankAccount {
     // Variable Fields
     private double money;
     private String name;
+    // Static variables
+    public static final double INTEREST_RATE = .05; // Final variable - cannot change/mutate
+    private static int totalAccounts = 0;
 
-    // Methods
     public BankAccount() {
         money = 0;
         name = "John Doe";
-    } // Default Constructor
-
-    public BankAccount(double m, String n) {
-        money = m;
-        name = n;
+        totalAccounts++;
     }
 
+    // Constructors
+    public BankAccount(double blah, String ha) {
+        money = blah;
+        name = ha;
+        totalAccounts++;    
+    }
+
+    public double calcInterest() {
+        return money * INTEREST_RATE;
+    }
+
+    // Methods
     public void deposit(double amount) {
         money += amount;
     }
 
-    public String withdrawl(double amount) {
+    public String withdraw(double amount) {
         if (amount <= money) {
             money -= amount;
-            return "Withdrawl complete.";
+            roundMoney();
+            return "Withdraw complete.";
         } else {
-            return "Withdrawl failed.";
+            return "Withdraw failed.";
         }
     }
 
-    // accessor method - get variables
+    // accessor methods - get variables
+    public static int getTotalAccounts() { // class/static method
+        return totalAccounts;
+    }
+
     public double getBalance() {
         return money;
     }
@@ -38,7 +53,7 @@ public class BankAccount {
         return name;
     }
 
-    // mutator methods - set variables
+    // modifier/mutator methods - set variables
     public void setMoney(double mon) {
         money = mon;    
     }
@@ -47,6 +62,18 @@ public class BankAccount {
         name = n;
     }
 
+    // Support method
+    private void roundMoney() {
+        money = (int)(Math.round(money * 100)) / 100.0;
+    }
+
+    public void transfer(double amt, BankAccount acc) {
+        this.withdraw(amt);
+        acc.deposit(amt);
+    }
+
+    // Very special method that every class should have
+    // If no toString method, one is provided for you
     public String toString() {
         return "Name: " + name + "\nMoney: " + money;
     }

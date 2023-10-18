@@ -141,5 +141,6 @@ public class PigGame {
         } else {
             System.out.println("You lost to the computer.");
         }
+        scan.close();
     }
 }

@@ -7,13 +7,14 @@ public class StringNotes {
         Scanner scan = new Scanner(System.in);
 
         // int is a primitive data type
-        int dog = 32;
+        // int dog = 32;
 
         // String is a class (not a primitive data type)
         String blah = new String("Hello World");
         System.out.print("Give me your name: ");
         String name = scan.nextLine();
 
+        scan.close();
         name = name.toUpperCase();
         System.out.println(name);
 
@@ -46,14 +47,12 @@ public class StringNotes {
             System.out.println(blah.charAt(i));
         }
 
-        String frog = blah.substring(8, 11); // 8 is inclusive, 11 is exclusive
+        // String frog = blah.substring(8, 11); // 8 is inclusive, 11 is exclusive
         // frog is now "rld"
 
         int nameLen = name.length();
 
         System.out.println(name.substring(nameLen-3, nameLen));
         System.out.println(name.substring((nameLen / 2) - 1, nameLen - (nameLen / 2) + 1));
-
-
     }
 }
