@@ -13,11 +13,12 @@ jobs:
     - name: Set up Java
       uses: actions/setup-java@v2
       with:
-        java-version: '17'  # You can specify the desired Java version
+        java-version: '17'
+        distribution: 'adopt'
 
     - name: Compile Java files
       run: |
-        # Change the directory to your Java source directory
+        # Change the directory to the Java source directory
         cd Modules/
 
         # Find and compile all Java files
