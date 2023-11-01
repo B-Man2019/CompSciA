@@ -70,7 +70,7 @@ public class Sales
             }
         }
         System.out.println(numExceeded + " people exceeded the threshold of $" + threshold);
-
+        scan.close();
     }
 }
 
