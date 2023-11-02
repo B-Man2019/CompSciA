@@ -37,6 +37,7 @@ public class ItemDriver {
             System.out.print("\nQuantity of item: ");
             int quantity = scan.nextInt();
             if (quantity == 0) {
+                scan.close();
                 break;
             }
             scan.nextLine();
@@ -66,5 +67,6 @@ public class ItemDriver {
         }
         System.out.println("\nPlease pay " + NumberFormat.getCurrencyInstance(new Locale("en", "US"))
         .format(sum));
+        
     }
 }
