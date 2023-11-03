@@ -23,8 +23,10 @@ public class BandDriver {
                 String name = scan.nextLine();
                 bandBoosters.add(new BandBooster(name));
             } else if (choice == 2) {
-                for (int i = 0; i < bandBoosters.size(); i++) {
-                    System.out.println((i + 1) + ". " + bandBoosters.get(i));
+                int i = 0;
+                for (BandBooster booster: bandBoosters) {
+                    System.out.println((i + 1) + ". " + booster);
+                    i++;
                 }
 
                 System.out.print("Enter the number of the BandBooster you want to add sales to: ");
@@ -38,9 +40,11 @@ public class BandDriver {
                 fire.updateSales(boxes);
             } else if (choice == 3) {
                 if (!(bandBoosters.size() == 0)) {                
-                    for (int i = 0; i < bandBoosters.size(); i++) {
-                        System.out.println((i + 1) + ". " + bandBoosters.get(i));
-                    }
+                int i = 0;
+                for (BandBooster booster: bandBoosters) {
+                    System.out.println((i + 1) + ". " + booster);
+                    i++;
+                }
                 } else {
                     System.out.println("No band boosters entered.");
                 }
@@ -48,8 +52,10 @@ public class BandDriver {
                 System.out.println("\nPress enter to continue...");
                 scan.nextLine();
             } else if (choice == 4) {
-                for (int i = 0; i < bandBoosters.size(); i++) {
-                    System.out.println((i + 1) + ". " + bandBoosters.get(i));
+                int i = 0;
+                for (BandBooster booster: bandBoosters) {
+                    System.out.println((i + 1) + ". " + booster);
+                    i++;
                 }
 
                 System.out.print("Enter the number of the BandBooster you want to delete: ");
