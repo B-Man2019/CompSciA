@@ -18,11 +18,13 @@ public class BandDriver {
             choice = scan.nextInt();
             scan.nextLine();
             
-            if (choice == 1) {
+            switch (choice) {
+            case 1:
                 System.out.print("Name: ");
                 String name = scan.nextLine();
                 bandBoosters.add(new BandBooster(name));
-            } else if (choice == 2) {
+                break;
+            case 2:
                 int i = 0;
                 for (BandBooster booster: bandBoosters) {
                     System.out.println((i + 1) + ". " + booster);
@@ -38,9 +40,10 @@ public class BandDriver {
 
                 int boxes = scan.nextInt();
                 fire.updateSales(boxes);
-            } else if (choice == 3) {
+                break;
+            case 3:
                 if (!(bandBoosters.size() == 0)) {                
-                int i = 0;
+                i = 0;
                 for (BandBooster booster: bandBoosters) {
                     System.out.println((i + 1) + ". " + booster);
                     i++;
@@ -51,22 +54,26 @@ public class BandDriver {
 
                 System.out.println("\nPress enter to continue...");
                 scan.nextLine();
-            } else if (choice == 4) {
-                int i = 0;
+                break;
+            case 4:
+                i = 0;
                 for (BandBooster booster: bandBoosters) {
                     System.out.println((i + 1) + ". " + booster);
                     i++;
                 }
 
                 System.out.print("Enter the number of the BandBooster you want to delete: ");
-                int pony = scan.nextInt();
-                bandBoosters.remove(pony - 1);
-            } else if (choice == 5) {
+                int dog = scan.nextInt();
+                bandBoosters.remove(dog - 1);
+                break;
+            case 5:
                 scan.close();
                 break;
-            } else {
+            default:
                 System.out.println("Please enter a valid choice.");
+                break;
             }
+
         }
         scan.close();
     }
