@@ -1,4 +1,4 @@
-package Modules.Module6Arrays;
+
 
 import java.util.Scanner;
 
@@ -158,5 +158,6 @@ public class TwoDArrayAssignment {
         }
 
         System.out.println("\nDiagonals greater than 30: " + count);
+        scan.close();
     }
 }

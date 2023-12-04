@@ -1,4 +1,4 @@
-package Modules.Module6Arrays;
+
 
 import java.text.NumberFormat;
 import java.util.Arrays;

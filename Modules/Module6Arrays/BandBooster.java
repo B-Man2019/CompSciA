@@ -1,4 +1,4 @@
-package Modules.Module6Arrays;
+
 
 public class BandBooster {
     String name;
