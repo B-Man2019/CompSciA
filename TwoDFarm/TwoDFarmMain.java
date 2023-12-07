@@ -1,3 +1,4 @@
+package TwoDFarm;
 import java.util.Scanner;
 
 public class TwoDFarmMain {
