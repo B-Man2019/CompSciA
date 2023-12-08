@@ -1,4 +1,4 @@
-package Modules.Module3Loops;
+package Module3Loops;
 
 public class ForLoopNotes {
     public static void main(String[] args) {

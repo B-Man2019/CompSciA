@@ -1,4 +1,4 @@
-package Modules.Module5Classes;
+package Module5Classes;
 
 public class DiceDriver {
     public static void main(String[] args) {

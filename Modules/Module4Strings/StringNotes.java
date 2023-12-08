@@ -1,4 +1,4 @@
-package Modules.Module4Strings;
+package Module4Strings;
 
 import java.util.Scanner;
 

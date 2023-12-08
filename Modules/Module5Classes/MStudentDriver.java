@@ -1,4 +1,4 @@
-package Modules.Module5Classes;
+package Module5Classes;
 
 public class MStudentDriver {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Modules.Module1Intro.Level1Programming;
+package Module1Intro.Level1Programming;
 
 import java.util.Scanner;
 

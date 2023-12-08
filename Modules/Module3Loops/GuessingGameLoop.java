@@ -1,4 +1,4 @@
-package Modules.Module3Loops;
+package Module3Loops;
 
 
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package Modules.Module5Classes;
+package Module5Classes;
 
 public class Student {
     private String name;
