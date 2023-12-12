@@ -3,15 +3,20 @@ package Sem1FinalExam;
 import java.util.ArrayList;
 
 public class DeckOfCards {
-    ArrayList<Card> Deck = new ArrayList<Card>();
+    ArrayList<Card> deck = new ArrayList<Card>();
 
     public DeckOfCards() {
         for (Suits suit: Suits.values()) { // .values creates an array of the enums
             for (Faces face: Faces.values()) {
-                Deck.add(new Card(suit, face));
+                deck.add(new Card(suit, face));
             }
         }
-        System.out.println(toString());
+    }
+
+    public DeckOfCards(int num) {
+        for (int i = 0; i <= num; i++) {
+
+        }
     }
 
     // *************************
@@ -20,23 +25,35 @@ public class DeckOfCards {
     // with another random card
     // *************************
     public void shuffle() {
-        for (int i = 0; i < 75; i++) {
-            int rand1 = (int)((Math.random()) * Deck.size() - 1) + 1;
-            int rand2 = (int)((Math.random()) * Deck.size() - 1) + 1;
+        for (int i = 0; i < deck.size() - 1; i++) {
+            int rand1 = (int)((Math.random()) * (deck.size()));
+            int rand2 = (int)((Math.random()) * (deck.size()));
 
-            Card temp = Deck.get(rand1);
-            Deck.set(rand1, Deck.get(rand2));
-            Deck.set(rand2, temp);
+            Card temp = deck.get(rand1);
+            deck.set(rand1, deck.get(rand2));
+            deck.set(rand2, temp);
         }
-        System.out.println(toString());
     }
+
+    public int deckSize() {
+        int len = 0;
+
+        for (int i = 0; i < deck.size(); i++) {
+            len++;
+        }
+        return len;
+    }
+
+    public void addCard(Suits suit, Faces face) {
+        deck.add(new Card(suit, face));
+    }
+
 
     public String toString() {
         String str = new String();
-        for (Card card : Deck) {
+        for (Card card : deck) {
             str += card + "\n";
         }
-
         return str;
     }
 }
